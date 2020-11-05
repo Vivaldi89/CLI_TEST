@@ -98,3 +98,18 @@ input {
 .f {
     background-color: white;
 }
+
+.block {
+    /* height: 30px;  */
+    margin-bottom: 5px;
+    margin-top: -6px;
+    margin-right: -10px;
+    vertical-align: middle;
+    float: right;
+    font-size: 14px;
+}
+
+#cont {
+    line-height: 30px;
+    padding-bottom: 10px;
+}
