@@ -9,7 +9,7 @@
 }
 
 body {
-    min-width: 1300px;
+    min-width: 1600px;
 }
 
 #header {
@@ -31,7 +31,7 @@ body {
     float: left;
     vertical-align: middle;
     text-align:center; 
-    vertical-align:middle;
+    margin-right: 3px;
 }
 
 .checkb{
@@ -42,6 +42,10 @@ body {
 .msg_wrap {
     /* vertical-align: middle; */
 
+}
+
+.clicked {
+    border: 2px solid black;
 }
 
 button {
@@ -55,6 +59,7 @@ button {
     line-height: 48px;
     display: inline-block;
     vertical-align: middle;
+    padding-left: 10px;
 }
 
 input {
@@ -68,6 +73,7 @@ input {
     height: 15px;
     width: 15px;
     vertical-align: middle;
+    
 }
 
 .item {
@@ -76,6 +82,19 @@ input {
     height: 48px;
     border: none;
     color: white;
-    padding-right: 10px;
+    background-color: white;
+    /* padding-right: 10px; */
+    
+}
 
+.bl {
+    width: 89%;
+    float: right;
+    height: 48px;
+    /* display: inline-block; */
+    vertical-align: middle;
+}
+
+.f {
+    background-color: white;
 }
