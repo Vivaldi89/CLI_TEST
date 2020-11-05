@@ -12,7 +12,7 @@
     
     <title>To do</title>
 </head>
-<body>
+<body onload="erase();">
     <div id='main' class='row'>
         <div class="col-4"></div>
         <div id='list' class="col-4">
@@ -21,8 +21,8 @@
             </div>
             <div id='f' class="f"></div>
             <div id='cont' class='container-fluid mx-auto d-block rounded todo align-middle border'>
-                <form>
-                    <input id='inp' onclick='erase()' placeholder="Add new item" type="text" name="inputbox" value="" style='width:17em'>
+                <form id='form'>
+                    <input id='inp' onclick="" placeholder="Add new item" type="text" name="inputbox" value="" style='width:57%'>
                     <div  class="float-right">
                         <input type="button" id='#ffa400' onclick="color('#ffa400')" style="background-color: #ffa400;" class="msg1 block"></button>
                         <input type="button" id='#00d669' onclick="color('#00d669')" style="background-color: #00d669;" class="msg1 block"></button>
@@ -30,7 +30,7 @@
                         <input type="button" id='red' onclick="color('red')" style="background-color: red;" class="msg1 block"></button>
                         <input type="button" id='blue' onclick="color('blue')" style="background-color: blue;" class="msg1 block"></button>
                         <input type="button" id='green' onclick="color('green')" style="background-color: green;" class="msg1 block"></button>
-                        <input type="button" onclick="proc()" style="margin-left: 15px;" class="block rounded float-right" value="Add" />
+                        <input type="button" id='wage' onclick="proc();" style="margin-left: 15px;" class="block rounded float-right" value="Add" />
                     </div>
                 </form>
                   <!-- </div> -->
@@ -41,5 +41,12 @@
         
         <div class="col-4"></div>
     </div>
+    <script>
+        document.getElementById('form').onsubmit = function(e) {
+        
+        proc();
+        e.preventDefault();
+    };
+    </script>
 </body>
 </html>

@@ -4,6 +4,14 @@ let counter = 0
 let colors = ['blue', '#ffa400', 'green', 'red', '#00d669', '#530cff']
 col = colors[Math.floor(Math.random()*colors.length)]
 
+// let t = document.getElementById('inp')
+//     // for (let i = 0; i < colors.length; i++) {
+//     //     document.getElementById(colors[i]).classList.remove('clicked')
+//     // }
+// col = colors[Math.floor(Math.random()*colors.length)]
+// let d = document.getElementById(col)
+// d.classList.add('clicked')
+
 class item {
     constructor() {
         this.color = ""
@@ -62,7 +70,7 @@ function proc() {
     
     if (!t.value) return
     x.publish()
-    t.value = ""
+    erase()
 }
 
 function erase() {
@@ -86,15 +94,17 @@ function color(color) {
 function switch_gray(counter) {
     let x = document.getElementById(counter+'div')
     let t = document.getElementById(counter+'cd')
+    let td = document.getElementById(counter+'td')
     let checkbox = document.getElementById(counter)
     if (checkbox.checked) {
         x.style.cssText = 'background-color: #ccc;'
         t.style.cssText = 'background-color: #ccc;'
-        t.style.setProperty("text-decoration", "line-through");
+        td.style.setProperty("text-decoration", "line-through");
     }
     else {
         x.style.cssText = 'background-color:'+y[Number(counter)]+';'
         t.style.cssText = 'background-color:'+y[Number(counter)]+';'
+        td.style.setProperty("text-decoration", "none");
     }
 
 }
